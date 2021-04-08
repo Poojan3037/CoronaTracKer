@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+.global-app{
+    width: 30%;
+}
+
+.virus-img{
+    width: 50px;
+    height: 50px;
+}
+
+.card-header{
+    font-size: 40px;
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    display: flex;
+   
+}
+
+.state-card{
+    width:18vw;
+    padding: 0px;
+    transition-property: padding width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+
+}
+
+
+
+.state-card:hover{
+   width: 21vw;
+   padding: 25px;
+   cursor: pointer;
+   background-color: #f2f2f2;
+   border-radius: 10%;
+
+
+}
+
+
+.state-box{
+    padding: 20px;
+}
+.box::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+
+
+.slogan-img{
+    width: 100px;
+    height: 100px;
+}
+
+@media  screen and (max-width:640px) and (min-width:300px){
+    .state-card{
+        width: 85vw;
+    }
+    .box{
+        height: auto;
+    }
+
+    .virus-img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .state-card:hover{
+        width: 95vw;
+        padding: 10px;
+    }
+}
