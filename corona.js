@@ -10,24 +10,23 @@ searchBtn.addEventListener("click",()=>{
 
 function corona(){
 
-    let yesterday=new Date(Date.now()-864e5);
-    console.log(yesterday)
-    let year=yesterday.getFullYear();
-    let month=yesterday.getMonth()+1;
-    let date=yesterday.getDate();
-  
-    let stateName=selectValue.value;
-    console.log(stateName)
+   let today=new Date(Date.now()-86400000-86400000);
+   let year=today.getFullYear();
+   let date=today.getDate();
+   let month=today.getMonth()+1;
+
+   console.log(today,year,date,month);
 
     let url=`https://api.covid19api.com/live/country/india/status/confirmed/date/${year}-${month}-${date}T13:13:30Z`;
     fetch(url).then((response)=>{
         return response.json();
     }).then((data)=>{
         let html="";
-
+        console.log(data)
         if(stateName=="All" || stateName==undefined){
             html="";
             data.forEach((element,index) => {
+
                     html+=`
                     <div class="state-box">
                     <div class="card  mb-3 state-card ">
