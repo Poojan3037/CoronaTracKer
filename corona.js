@@ -17,16 +17,16 @@ function corona(){
 
    console.log(today,year,date,month);
 
+   let stateName=selectValue.value;
+
     let url=`https://api.covid19api.com/live/country/india/status/confirmed/date/${year}-${month}-${date}T13:13:30Z`;
     fetch(url).then((response)=>{
         return response.json();
     }).then((data)=>{
         let html="";
-        console.log(data)
         if(stateName=="All" || stateName==undefined){
             html="";
             data.forEach((element,index) => {
-
                     html+=`
                     <div class="state-box">
                     <div class="card  mb-3 state-card ">
@@ -69,6 +69,7 @@ function corona(){
             });
         }
 
+    console.log(html)
             
         states.innerHTML=html;
         
