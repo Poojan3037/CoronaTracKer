@@ -13,6 +13,7 @@ body{
     width: 30%;
 }
 
+
 .virus-img{
     width: 50px;
     height: 50px;
@@ -31,7 +32,7 @@ body{
 }
 
 .state-card{
-    width:18vw;
+    width:25vw;
     padding: 0px;
     transition-property: padding width;
     transition-duration: 0.3s;
@@ -84,3 +85,25 @@ body{
         padding: 10px;
     }
 }
+
+
+
+@media  screen and (max-width:1024px) and (min-width:768px){
+    .state-card{
+        width: 65vw;
+    }
+    .box{
+        height: auto;
+    }
+
+    .virus-img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .state-card:hover{
+        width: 95vw;
+        padding: 10px;
+    }
+}
+
