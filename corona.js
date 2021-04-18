@@ -10,7 +10,7 @@ searchBtn.addEventListener("click",()=>{
 
 function corona(){
 
-   let today=new Date(Date.now()-86400000-86400000);
+   let today=new Date(Date.now()-86400000);
    let year=today.getFullYear();
    let date=today.getDate();
    let month=today.getMonth()+1;
